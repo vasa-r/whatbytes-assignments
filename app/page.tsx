@@ -1,3 +1,4 @@
+import MainBody from "@/components/MainBody";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
 
@@ -7,6 +8,7 @@ const Home = () => {
       <NavBar />
       <div className="flex w-full h-full">
         <SideBar />
+        <MainBody />
       </div>
     </div>
   );

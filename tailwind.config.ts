@@ -22,6 +22,9 @@ export default {
         right: "1px 0px 0px 0px rgba(0, 0, 0, 0.1)", // Right shadow
         bottom: "0px 1px 0px 0px rgba(0, 0, 0, 0.1)", // Bottom shadow
       },
+      backgroundColor: {
+        // image :
+      },
     },
   },
   plugins: [],
