@@ -11,17 +11,16 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        selected: "#0958d6",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
       },
       boxShadow: {
         custom:
-          "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px", // Define your custom shadow
-        "right-custom":
-          "6px 0px 24px 0px rgba(0, 0, 0, 0.05), 1px 0px 0px 0px rgba(0, 0, 0, 0.08)", // Right-only shadow
-        "bottom-custom":
-          "0px 6px 24px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px 0px rgba(0, 0, 0, 0.08)",
+          "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
+        right: "1px 0px 0px 0px rgba(0, 0, 0, 0.1)", // Right shadow
+        bottom: "0px 1px 0px 0px rgba(0, 0, 0, 0.1)", // Bottom shadow
       },
     },
   },

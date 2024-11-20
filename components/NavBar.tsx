@@ -5,7 +5,7 @@ import User from "@/assets/user.png";
 
 const NavBar = () => {
   return (
-    <div className="shadow-bottom-custom p-5 flex items-center justify-between">
+    <div className="shadow-bottom p-5 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <Image src={Logo} alt="app logo" width={50} height={50} />
         <h1 className="text-3xl font-semibold">WhatBytes</h1>
