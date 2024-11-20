@@ -1,6 +1,6 @@
 import React from "react";
-import MainSection from "./MainSection";
-import AnalysisSection from "./AnalysisSection";
+import MainSection from "./Main/MainSection";
+import AnalysisSection from "./Analysis/AnalysisSection";
 
 const MainBody = () => {
   return (

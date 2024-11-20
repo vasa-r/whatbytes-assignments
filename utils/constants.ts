@@ -40,3 +40,34 @@ export const statCard = {
   note: Note,
   tick: Tick,
 };
+
+export const syllabusData = [
+  {
+    id: 1,
+    title: "HTML Tools, Forms, History",
+    percentage: 80,
+    progressColor: "#2590f7",
+    progressBg: "#d6ebff",
+  },
+  {
+    id: 2,
+    title: "Tags & References in HTML",
+    percentage: 60,
+    progressColor: "#ff9600",
+    progressBg: "#ffedd2",
+  },
+  {
+    id: 3,
+    title: "Tables & References in HTML",
+    percentage: 24,
+    progressColor: "#ff3434",
+    progressBg: "#ffe1e1",
+  },
+  {
+    id: 4,
+    title: "Tables & CSS Basics",
+    percentage: 96,
+    progressColor: "#00e241",
+    progressBg: "#dfffe8",
+  },
+];

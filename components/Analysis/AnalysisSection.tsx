@@ -1,12 +1,10 @@
 import React from "react";
-import Card from "./Card";
+import Syllabus from "./Syllabus";
 
 const AnalysisSection = () => {
   return (
-    <div className="w-[40%] h-full">
-      <Card>
-        <div></div>
-      </Card>
+    <div className="w-[40%] h-full flex flex-col gap-5">
+      <Syllabus />
     </div>
   );
 };

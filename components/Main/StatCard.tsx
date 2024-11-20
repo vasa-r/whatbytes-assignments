@@ -1,6 +1,6 @@
 import React from "react";
 import { statCard } from "@/utils/constants";
-import Card from "./Card";
+import Card from "../Card";
 import Image from "next/image";
 
 const StatCard = () => {
