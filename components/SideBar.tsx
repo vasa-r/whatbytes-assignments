@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SideBar = () => {
   return (
-    <div className="w-[16%] shadow-right h-full pt-16 pr-2 ">
+    <div className="w-[16%] shadow-right pt-16 pr-2 ">
       {sidebarData.map(({ id, icon, label }) => {
         return (
           <div
