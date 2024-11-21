@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         selected: "#0958d6",
+        btnBlue: "#00008b",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

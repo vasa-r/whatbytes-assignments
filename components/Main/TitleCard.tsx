@@ -1,10 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Card from "../Card";
 import Image from "next/image";
 import { titleCardData } from "@/utils/constants";
+import UpdateStatModal from "../UpdateStatModal";
 
 const TitleCard = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const { image, title, questions, duration, submittedOn } = titleCardData;
+
+  const handleSHowModal = () => setShowModal(true);
+
+  if (showModal)
+    return <UpdateStatModal showModal={showModal} setModal={setShowModal} />;
+
   return (
     <Card>
       <div className="flex justify-between items-center">
@@ -17,7 +28,10 @@ const TitleCard = () => {
             <div className="px-2 ">Submitted on {submittedOn}</div>
           </div>
         </div>
-        <button className="bg-[#00008b] text-white text-lg font-semibold px-6 py-2 rounded-md">
+        <button
+          className="bg-btnBlue text-white text-lg font-semibold px-6 py-2 rounded-md"
+          onClick={handleSHowModal}
+        >
           Update
         </button>
       </div>
