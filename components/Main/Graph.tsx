@@ -10,7 +10,7 @@ import {
 
 const GraphChart = () => {
   const { graphData, stat } = useAppContext();
-  console.log(Number(stat.percentile));
+  // console.log(Number(stat.percentile));
   return (
     <ResponsiveContainer width="100%" height={400}>
       <LineChart data={graphData}>

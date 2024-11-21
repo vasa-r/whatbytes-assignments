@@ -13,8 +13,8 @@ const StatCard = () => {
     <Card>
       <div className="flex flex-col gap-2">
         <h2 className="text-lg font-extrabold">{title}</h2>
-        <div className="flex">
-          <div className="border-r-2 flex gap-3 p-5 flex-1">
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="sm:border-r-2 border-0 flex gap-3 p-5 flex-1">
             <div className="bg-gray-100 flex justify-center items-center size-12 rounded-full">
               <Image src={trophy} alt="trophy" width={20} height={20} />
             </div>
@@ -23,7 +23,7 @@ const StatCard = () => {
               <p className="text-gray-500 font-medium text-xs">YOUR RANK</p>
             </div>
           </div>
-          <div className="border-r-2 flex gap-3 p-5 flex-1">
+          <div className="sm:border-r-2 border-0 flex gap-3 p-5 flex-1">
             <div className="bg-gray-100 flex justify-center items-center size-12 rounded-full">
               <Image src={note} alt="trophy" width={20} height={20} />
             </div>

@@ -4,7 +4,7 @@ import Question from "./Question";
 
 const AnalysisSection = () => {
   return (
-    <div className="w-[40%] h-full flex flex-col gap-5">
+    <div className="sm:w-[40%] w-full h-full flex flex-col gap-5">
       <Syllabus />
       <Question />
     </div>

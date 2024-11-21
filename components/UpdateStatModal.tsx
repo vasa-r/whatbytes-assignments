@@ -69,7 +69,7 @@ const UpdateStatModal = ({ showModal, setModal }: ModalProps) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000]">
       <div
         ref={modalRef}
-        className=" p-5 w-[40rem] rounded-md bg-white font-semibold flex flex-col gap-8 justify-between items-center relative"
+        className=" p-5 sm:w-[40rem] w-[25rem] rounded-md bg-white font-semibold flex flex-col gap-8 justify-between items-center relative"
       >
         <div className="flex items-center justify-between w-full">
           <h2 className="text-2xl font-bold">Update Scores</h2>
@@ -79,11 +79,15 @@ const UpdateStatModal = ({ showModal, setModal }: ModalProps) => {
         <form className="w-full flex flex-col gap-5" onSubmit={submitStat}>
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-7 h-7 rounded-full bg-btnBlue text-white flex items-center justify-center">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-btnBlue text-white flex items-center justify-center">
                 1
               </div>
-              <label htmlFor="rank" className="text-lg font-normal">
-                Update your <span className="font-bold">Rank</span>
+              <label
+                htmlFor="rank"
+                className="text-base sm:text-lg font-normal"
+              >
+                Update your{" "}
+                <span className="sm:font-bold font-medium">Rank</span>
               </label>
             </div>
             <div>
@@ -103,11 +107,15 @@ const UpdateStatModal = ({ showModal, setModal }: ModalProps) => {
           </div>
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-7 h-7 rounded-full bg-btnBlue text-white flex items-center justify-center">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-btnBlue text-white flex items-center justify-center">
                 2
               </div>
-              <label htmlFor="percentile" className="text-lg font-normal">
-                Update your <span className="font-bold">Percentile</span>
+              <label
+                htmlFor="percentile"
+                className="text-base sm:text-lg font-normal"
+              >
+                Update your{" "}
+                <span className="sm:font-bold font-medium">Percentile</span>
               </label>
             </div>
             <div>
@@ -127,12 +135,17 @@ const UpdateStatModal = ({ showModal, setModal }: ModalProps) => {
           </div>
           <div className="w-full flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-7 h-7 rounded-full bg-btnBlue text-white flex items-center justify-center">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-btnBlue text-white flex items-center justify-center">
                 3
               </div>
-              <label htmlFor="currentScore" className="text-lg font-normal">
+              <label
+                htmlFor="currentScore"
+                className="text-base sm:text-lg font-normal"
+              >
                 Update your{" "}
-                <span className="font-bold">Current Score (out of 15)</span>
+                <span className="sm:font-bold font-medium">
+                  Current Score (out of 15)
+                </span>
               </label>
             </div>
             <div>

@@ -10,7 +10,7 @@ import { useAppContext } from "@/context/AppContext";
 const GraphChart = dynamic(() => import("./Graph"), { ssr: false });
 
 const Chart = () => {
-  const { stat } = useAppContext();
+  const { stat, screenWidth } = useAppContext();
   return (
     <Card>
       <div>
@@ -19,11 +19,11 @@ const Chart = () => {
           <h2 className="mt-3 text-base font-bold text-slate-700">
             You Scored {stat.percentile}% percentile.{" "}
             <span className="font-normal">
-              which is lower than <br /> the average percentile 72% of all the
-              engineers who took this assignment.
+              which is lower than {screenWidth > 768 && <br />} the average
+              percentile 72% of all the engineers who took this assignment.
             </span>
           </h2>
-          <div className="bg-gray-100 flex justify-center items-center size-12 rounded-full">
+          <div className="bg-gray-100 flex justify-center items-center size-10 sm:size-12 rounded-full">
             <Image src={Graph} alt="trophy" width={25} height={25} />
           </div>
         </div>

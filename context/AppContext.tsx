@@ -14,6 +14,7 @@ interface AppContextType {
   stat: StatType;
   UpdateStat: (statData: StatType) => void;
   graphData: GraphData[];
+  screenWidth: number;
 }
 
 interface AppContextProps {
@@ -32,14 +33,35 @@ export const useAppContext = () => {
 
 const AppProvider = ({ children }: AppContextProps) => {
   const initialData = {
-    rank: 0,
-    percentile: 0,
-    currentScore: 0,
+    rank: 3,
+    percentile: 23,
+    currentScore: 4,
   };
   const [stat, setStat] = useState<StatType>(initialData);
   const [graphData, setGraphData] = useState<GraphData[]>(graphInitialData);
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => updateGraphData(Number(stat.percentile)), [stat.percentile]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreenWidth(window.innerWidth);
+    });
+
+    console.log("screenWidth", screenWidth);
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setScreenWidth(window.innerWidth);
+      });
+    };
+  }, [screenWidth]);
 
   const UpdateStat = (statData: Partial<StatType>) => {
     setStat((prev) => ({ ...prev, ...statData }));
@@ -65,7 +87,7 @@ const AppProvider = ({ children }: AppContextProps) => {
     }
   };
 
-  const values = { stat, UpdateStat, graphData };
+  const values = { stat, UpdateStat, graphData, screenWidth };
 
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 };

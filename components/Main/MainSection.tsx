@@ -5,7 +5,7 @@ import Chart from "./Chart";
 
 const MainSection = () => {
   return (
-    <div className="w-[60%] h-full flex flex-col gap-5">
+    <div className="sm:w-[60%] w-full h-full flex flex-col gap-5">
       <TitleCard />
       <StatCard />
       <Chart />

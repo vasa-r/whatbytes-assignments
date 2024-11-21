@@ -26,6 +26,9 @@ export default {
       backgroundColor: {
         // image :
       },
+      screens: {
+        sm: "640px",
+      },
     },
   },
   plugins: [],
