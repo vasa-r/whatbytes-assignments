@@ -1,10 +1,14 @@
+"use client";
+
 import React from "react";
 import { statCard } from "@/utils/constants";
 import Card from "../Card";
 import Image from "next/image";
+import { useAppContext } from "@/context/AppContext";
 
 const StatCard = () => {
   const { title, trophy, tick, note } = statCard;
+  const { stat } = useAppContext();
   return (
     <Card>
       <div className="flex flex-col gap-2">
@@ -15,7 +19,7 @@ const StatCard = () => {
               <Image src={trophy} alt="trophy" width={20} height={20} />
             </div>
             <div>
-              <h1 className="text-xl font-bold">1</h1>
+              <h1 className="text-xl font-bold">{stat.rank}</h1>
               <p className="text-gray-500 font-medium text-xs">YOUR RANK</p>
             </div>
           </div>
@@ -24,7 +28,7 @@ const StatCard = () => {
               <Image src={note} alt="trophy" width={20} height={20} />
             </div>
             <div>
-              <h1 className="text-xl font-bold">30%</h1>
+              <h1 className="text-xl font-bold">{stat.percentile}%</h1>
               <p className="text-gray-500 font-medium text-xs">PERCENTILE</p>
             </div>
           </div>
@@ -33,7 +37,7 @@ const StatCard = () => {
               <Image src={tick} alt="trophy" width={25} height={25} />
             </div>
             <div>
-              <h1 className="text-xl font-bold">10 / 15</h1>
+              <h1 className="text-xl font-bold">{stat.currentScore} / 15</h1>
               <p className="text-gray-500 font-medium text-xs">
                 CORRECT ANSWERS
               </p>

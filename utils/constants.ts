@@ -71,3 +71,25 @@ export const syllabusData = [
     progressBg: "#dfffe8",
   },
 ];
+
+export interface GraphData {
+  marks: number;
+  numberOfStudents: number;
+}
+
+export const graphInitialData: GraphData[] = [
+  { marks: 0, numberOfStudents: 1 },
+  { marks: 10, numberOfStudents: 2 },
+  { marks: 20, numberOfStudents: 4 },
+  { marks: 25, numberOfStudents: 5 },
+  { marks: 30, numberOfStudents: 4 },
+  { marks: 40, numberOfStudents: 8 },
+  { marks: 45, numberOfStudents: 10 },
+  { marks: 50, numberOfStudents: 18 },
+  { marks: 60, numberOfStudents: 10 },
+  { marks: 70, numberOfStudents: 6 },
+  { marks: 75, numberOfStudents: 5 },
+  { marks: 80, numberOfStudents: 1 },
+  { marks: 90, numberOfStudents: 3 },
+  { marks: 100, numberOfStudents: 1 },
+];

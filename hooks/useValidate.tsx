@@ -17,15 +17,6 @@ const useValidate = (statData: StatType) => {
   const percentile = Number(statData.percentile);
   const currentScore = Number(statData.currentScore);
 
-  console.log(
-    "rank",
-    rank,
-    "percent",
-    percentile,
-    "currentScore",
-    currentScore
-  );
-
   const validate = () => {
     const errors: Partial<StatError> = {};
 
@@ -50,14 +41,14 @@ const useValidate = (statData: StatType) => {
 
     if (
       !statData.currentScore ||
-      isNaN(Number(statData.currentScore)) ||
-      Number(statData.currentScore) < 0 ||
-      Number(statData.currentScore) > 15
+      isNaN(currentScore) ||
+      currentScore < 0 ||
+      currentScore > 15
     ) {
       errors.currentScore = "required | current score 0-15";
     }
 
-    console.log("hook error", errors);
+    // console.log("hook error", errors);
 
     setFormErrors(errors);
     return Object.keys(errors).length === 0;

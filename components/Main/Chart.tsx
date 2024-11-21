@@ -4,19 +4,20 @@ import dynamic from "next/dynamic";
 import Card from "../Card";
 import Image from "next/image";
 import Graph from "@/assets/graph.png";
+import { useAppContext } from "@/context/AppContext";
 // import GraphChart from "./Graph";
 
 const GraphChart = dynamic(() => import("./Graph"), { ssr: false });
 
 const Chart = () => {
-  // const isClient = typeof window !== "undefined";
+  const { stat } = useAppContext();
   return (
     <Card>
       <div>
         <h2 className="text-lg font-extrabold">Comparison Graph</h2>
         <div className="flex justify-between mb-5">
           <h2 className="mt-3 text-base font-bold text-slate-700">
-            You Scored 30% percentile.{" "}
+            You Scored {stat.percentile}% percentile.{" "}
             <span className="font-normal">
               which is lower than <br /> the average percentile 72% of all the
               engineers who took this assignment.
